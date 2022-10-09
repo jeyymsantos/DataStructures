@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ITE302 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Number of Array: ");
+		int size = input.nextInt();
+		
+		int[] num = new int[size];
+		
+		for(int x = 0; x < num.length; x++) {
+			System.out.printf("Array Element [%d]: ", x);
+			num[x] = input.nextInt();
+		}
+		
+		System.out.print("Array Values: ");
+		for(int x: num) {
+			System.out.print(x + " ");
+		}
+		
+		System.out.print("\nEnter Number:");
+		
+
+	}
+
+}

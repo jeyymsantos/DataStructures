@@ -1,0 +1,44 @@
+
+public class LinkedList {
+	// Creating a Node
+	Node head;
+	
+	static class Node {
+		String value;
+		Node next;
+		
+		Node(String d){
+			value = d;
+			next = null;
+		}
+		
+	}
+	
+
+	public static void main(String[] args) {
+
+		LinkedList linkedList = new LinkedList();
+		
+		// Assign value values
+		linkedList.head = new Node("Jeyym");
+		Node second = new Node("Caryl");
+		Node third = new Node("Nichole");
+		Node fourth = new Node("Brenley");
+		
+		// Connect Nodes
+		linkedList.head.next = second;
+		second.next = third;
+		third.next = fourth;
+		
+		// Printing Node-Value
+		while(linkedList.head != null) {
+			System.out.print(linkedList.head.value + " ");
+			linkedList.head = linkedList.head.next;
+		}
+		
+		
+	}
+
+
+	
+}

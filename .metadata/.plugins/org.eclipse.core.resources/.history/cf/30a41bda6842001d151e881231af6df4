@@ -1,0 +1,47 @@
+
+
+// Imports the LinkedList Library
+import java.util.LinkedList;
+
+public class ActivtyLinkedList {
+	public static void main(String[] Jeyym) {		
+//		Declaration and Initialization of LinkedList
+		LinkedList<String> myList = new LinkedList<>();
+//		Adds an item/element at the end of the list.
+		myList.addLast("Sam");
+//		Adds another item/element at the end and in continuation of the list.
+		myList.addLast("Espino");
+//		Adds the third item/element at the end and in continuation of the list.
+		myList.addLast("ITE201");
+		
+//		Adds an item/element at the start/beginning of the list,
+//		moving the existing elements after the added item.
+		myList.addFirst("ITE203");
+		
+//		Removes the 4th element or the item located in index 3
+//		which is "ITE201"
+		myList.remove(3);
+		
+//		Displays all the remaining items inside of a pair of box braces.
+//		[ITE203, Sam, Espino]
+		System.out.println(myList);
+		
+//		This line clears/removes all the items/elements on the list.
+		myList.clear();
+		
+//		Prints an empty pair of box braces after removing all the items/
+//		elements inside of the list.
+		System.out.println(myList);
+		
+		
+		myList.add(0, "First");
+		myList.add(1, "Second");
+		myList.add("Hello");
+		myList.add(2, "Third");
+		myList.add(0, "Forth");
+		System.out.println(myList);
+		System.out.println(myList.size());
+		System.out.println(myList.contains("Third"));
+		System.out.println(myList.indexOf("Third"));
+	}
+}

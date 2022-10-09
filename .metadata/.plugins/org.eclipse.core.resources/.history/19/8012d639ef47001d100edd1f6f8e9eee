@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class LinkedListDynamic{	
+	static class Node{
+		int value;
+		Node next;
+		
+		Node(int d){
+			value = d;
+			next = null;
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		LinkedListDynamic list = new LinkedListDynamic();
+		
+		System.out.print("Enter # of elements =>");
+		int size = input.nextInt();
+		
+		for(int x = 0; x < size; x++) {	
+			System.out.printf("Enter element [%d] => ", x);
+			list.addNode(input.nextInt());
+		}
+		
+		list.display();
+	}
+	
+	// Node, Head
+	Node head = null;
+	Node tail = null;
+	
+	void addNode(int data) {
+	
+		Node newNode = new Node(data);
+		if(head == null) {
+			head = newNode;
+			tail = newNode;
+		}else {
+			tail.next = newNode;
+			tail = newNode;
+		}
+	}
+	
+	void display() {
+		if(head == null) {
+			System.out.println("List is Empty");
+		}
+
+		while(head != null) {
+			System.out.print(head.value + " ");
+			head = head.next;
+		}
+	}
+}
