@@ -1,5 +1,5 @@
 // Linked list implementation in Java
-
+import java.util.LinkedList;
 class LinkedListSingly {
   // Creating a node
   Node head;
